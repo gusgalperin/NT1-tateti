@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/Tateti.css" />
+    </head>
+
+    <div class="contenedor">
+        <div class="tablero">
+            <div id="btn_00" class="bloque" onclick="toco('00')"><label class="content"></label></div>
+            <div id="btn_01" class="bloque" onclick="toco('01')"><label class="content"></label></div>
+            <div id="btn_02" class="bloque" onclick="toco('02')"><label class="content"></label></div>
+            <div id="btn_10" class="bloque" onclick="toco('10')"><label class="content"></label></div>
+            <div id="btn_11" class="bloque" onclick="toco('11')"><label class="content"></label></div>
+            <div id="btn_12" class="bloque" onclick="toco('12')"><label class="content"></label></div>
+            <div id="btn_20" class="bloque" onclick="toco('20')"><label class="content"></label></div>
+            <div id="btn_21" class="bloque" onclick="toco('21')"><label class="content"></label></div>
+            <div id="btn_22" class="bloque" onclick="toco('22')"><label class="content"></label></div>
+        </div>
+
+        <br>
+        <br>
+
+        <div id="turnoActualContainer">
+            Le toca a: <label id="turnoActual"></label>
+        </div>
+
+        <br>
+        <br>
+
+        <div id="ganadorContainer" hidden>
+            <label id="ganador"></label>
+            <input type="button" id="reiniciar" value="Volver a jugar!" onclick="reiniciar()">
+        </div>
+
+        <br>
+        <br>
+
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>Jugador X</th>
+                    <th>Jugador O</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label id="puntajeX"></label></td>
+                    <td><label id="puntajeO"></label></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <script src="scripts/Puntaje.js"></script>
+    <script src="scripts/TurnoActual.js"></script>
+    <script src="scripts/Jugador.js"></script>
+    <script src="scripts/Tablero.js"></script>
+    <script src="scripts/Tateti.js"></script>
+
+</html>

@@ -1,0 +1,106 @@
+*{
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.contenedor {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tablero {
+  display: grid;
+  width: 300px;
+  height: 300px;
+  grid-template-columns: auto auto auto;
+}
+
+.bloque {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  border: 3px solid black;
+}
+
+.bloque:hover {
+  background: #06cf06;
+  cursor: pointer;
+}
+
+#btn_00,
+#btn_01,
+#btn_02 {
+  border-top: none;
+}
+
+#btn_00,
+#btn_10,
+#btn_20 {
+  border-left: none;
+}
+
+#btn_20,
+#btn_21,
+#btn_22 {
+  border-bottom: none;
+}
+
+#btn_02,
+#btn_12,
+#btn_22 {
+  border-right: none;
+}
+
+#turnoActualContainer,
+#ganadorContainer{
+  padding-top: 10%;
+}
+
+#ganador{
+  padding-right: 20px;
+}
+
+.jugadaGanadora{
+  background-color: #9dff33;
+}
+
+.ocupado{
+  pointer-events: none;
+}
+
+.tabla{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  text-align: center;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.tabla thead tr {
+  background-color: #009879;
+  color: #ffffff;
+}
+
+.tabla th,
+.tabla td {
+  padding: 12px 15px;
+}
+
+.tabla tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.tabla tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.tabla tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
